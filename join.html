@@ -1,0 +1,80 @@
+<html>
+	<!-- Channel Plugin Scripts -->
+<script>
+  (function() {
+    var w = window;
+    if (w.ChannelIO) {
+      return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+    }
+    var ch = function() {
+      ch.c(arguments);
+    };
+    ch.q = [];
+    ch.c = function(args) {
+      ch.q.push(args);
+    };
+    w.ChannelIO = ch;
+    function l() {
+      if (w.ChannelIOInitialized) {
+        return;
+      }
+      w.ChannelIOInitialized = true;
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+    if (document.readyState === 'complete') {
+      l();
+    } else if (window.attachEvent) {
+      window.attachEvent('onload', l);
+    } else {
+      window.addEventListener('DOMContentLoaded', l, false);
+      window.addEventListener('load', l, false);
+    }
+  })();
+  ChannelIO('boot', {
+    "pluginKey": "55b65b68-0de8-4145-9ec1-7819a93a91a0"
+  });
+</script>
+<!-- End Channel Plugin -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<title>KMBS 11기 특채지원 마감</title>
+<style type="text/css">
+body{background-image: linear-gradient(to bottom, #20cfda 20%, #00b7c7 80%); }
+.logo{ position:absolute; top:35%; left:50%; width:295px; height:300px; margin-left:-142px; z-index:999;}
+.logo img{ width:100%; height:auto;}
+.wave1{height:298px;position:fixed; bottom:0px; left:0px;z-index:3;width:100%;background:url(https://edu.org/images/bolang02.png) repeat-x 0 0;-webkit-animation:8s linear 0s none infinite tweenxx;-moz-animation:8s linear 0s none infinite tweenxx;animation:8s linear 0s none infinite tweenxx;}
+.wave{height:298px;background:url(https://edu.org/images/bolang01.png) repeat-x 100px 0;-webkit-animation:15s linear 0s none infinite tweenx;-moz-animation:15s linear 0s none infinite tweenx;animation:15s linear 0s none infinite tweenx;}
+
+
+@-webkit-keyframes tweenx{
+	0%{background-position:0 0;}
+	100%{background-position:1600px 0;}
+}
+
+@-webkit-keyframes tweenxx{
+	0%{background-position:0 0;}
+	100%{background-position:-1600px 0;}
+}
+
+
+
+@media screen and (max-width:450px){
+.logo{ position:absolute; top:35%; left:50%; width:48%; height:auto;  margin-left:-24%; z-index:999;}
+.wave1{ height:191px;background:url(https://edu.org/images/bolang03.png) repeat-x 0 0;-webkit-animation:8s linear 0s none infinite tweenxx;-moz-animation:8s linear 0s none infinite tweenxx;animation:15s linear 0s none infinite tweenxx;}
+.wave{ height:191px;background:url(https://edu.org/images/bolang04.png) repeat-x 100px 0;-webkit-animation:15s linear 0s none infinite tweenx;-moz-animation:15s linear 0s none infinite tweenx;animation:15s linear 0s none infinite tweenx;}
+
+}
+</style>
+</head>
+<body>
+<div class="logo"><img width="2000px" src="https://raw.githubusercontent.com/wondaehan/files/main/028103.png"></div>
+<div class="wave1"><div class="wave"></div></div>
+</body>
+</html>
